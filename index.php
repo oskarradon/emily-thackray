@@ -15,18 +15,15 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<p><a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a></p>
-			<?php endwhile; else : ?>
-				<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-			<?php endif; ?>
+	<main>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<p><a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a></p>
+		<?php endwhile; else : ?>
+			<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif; ?>
 
-<?php wp_footer(); ?>
-</body>
-</html>
+	</main>
+
+<?php get_footer(); ?>

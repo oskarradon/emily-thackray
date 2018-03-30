@@ -10,12 +10,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main>
+	
+</main>
 
-		</main>
-	</div>
-
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
