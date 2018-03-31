@@ -23,23 +23,21 @@
 <body <?php body_class(); ?>>
 	<div class="container">
 		<header>
-			<nav class="main-nav">
-				<a class="blog-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-
+			<a class="blog-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			
+			<nav class="page-nav">
 				<?php $pages = new WP_Query( array( 'post_type' => 'page','posts_per_page' => 10, 'no_found_rows'  => true,) );
-				
+
 				if ( $pages->have_posts() ) : while ( $pages->have_posts() ) : $pages->the_post(); ?>
-				  <a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a>
-				<?php endwhile; endif; wp_reset_postdata(); ?>
+				<a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
 			</nav>
 
-			<nav class="sub-nav">
+			<nav class="project-nav">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<a href=" <?php the_permalink(); ?> "><?php the_post_thumbnail(); ?></a>
 				<?php endwhile; else : ?>
 
 				<?php endif; ?>
 			</nav>
-
-
 		</header>
