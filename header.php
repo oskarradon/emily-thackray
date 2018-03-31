@@ -24,20 +24,40 @@
 	<div class="container">
 		<header>
 			<a class="blog-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			
+
 			<nav class="page-nav">
 				<?php $pages = new WP_Query( array( 'post_type' => 'page','posts_per_page' => 10, 'no_found_rows'  => true,) );
 
-				if ( $pages->have_posts() ) : while ( $pages->have_posts() ) : $pages->the_post(); ?>
-				<a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a>
-			<?php endwhile; endif; wp_reset_postdata(); ?>
+					if ( $pages->have_posts() ) : while ( $pages->have_posts() ) : $pages->the_post(); ?>
+						<a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a>
+				<?php endwhile; endif; wp_reset_postdata(); ?>
 			</nav>
 
 			<nav class="project-nav">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<a href=" <?php the_permalink(); ?> "><?php the_post_thumbnail(); ?></a>
-				<?php endwhile; else : ?>
+				<?php
+				$current_id = get_the_id();
+				echo $current_id;
+				$the_query = new WP_Query( array(
+				    'post_type' => 'post',
+				    'posts_per_page'=>-1
+				) );
 
-				<?php endif; ?>
+				if ( $the_query->have_posts() ) {
+			    while ( $the_query->have_posts() ) {
+		        $the_query->the_post();
+		        if( $current_id  == get_the_id() ){
+		          $current = 'active';
+		        } elseif ( $current_id == get_option( 'page_on_front' ) ) {
+		          $current = '';
+		        } else {
+							$current = '';
+						}
+		        echo '<a class="'.$current.'" href="'.get_permalink( get_the_id() ).'">';
+		        echo get_the_post_thumbnail( get_the_id() );
+		        echo '</a>';
+			    }
+				}
+				wp_reset_postdata();
+				?>
 			</nav>
 		</header>
