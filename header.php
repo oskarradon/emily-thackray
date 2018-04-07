@@ -45,10 +45,13 @@
 				if ( $the_query->have_posts() ) {
 			    while ( $the_query->have_posts() ) {
 		        $the_query->the_post();
+
 		        if( $current_id  == get_the_id() ){
 		          $current = 'active';
+							
 		        } elseif ( $current_id == get_option( 'page_on_front' ) ) {
 		          $current = '';
+
 		        } else {
 							$current = '';
 						}
