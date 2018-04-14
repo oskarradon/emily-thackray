@@ -99,6 +99,10 @@ header {
 	font-family: "Kavivanar", sans-serif;
 }
 
+.svg-small {
+	fill: transparent;
+}
+
 /* MEDIA QUERIES */
 
 /*	320px
