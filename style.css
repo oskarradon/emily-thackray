@@ -86,6 +86,7 @@ header {
 
 .project-nav a img:hover {
 	opacity: 1;
+	-webkit-transition: .5s;
 	transition: .5s;
 }
 
@@ -99,8 +100,14 @@ header {
 	font-family: "Kavivanar", sans-serif;
 }
 
-.svg-small {
-	fill: transparent;
+.text-snake {
+	height: 400px;
+	width: auto;
+	margin: -30px 0 0 30px;
+}
+
+.text-snake text {
+	font-size: 70px;
 }
 
 /* MEDIA QUERIES */
