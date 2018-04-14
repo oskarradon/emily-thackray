@@ -35,8 +35,6 @@
 
 			<nav class="project-nav">
 				<?php
-				$current_id = get_the_id();
-				echo $current_id;
 				$the_query = new WP_Query( array(
 				    'post_type' => 'post',
 				    'posts_per_page'=>-1
@@ -46,16 +44,7 @@
 			    while ( $the_query->have_posts() ) {
 		        $the_query->the_post();
 
-		        if( $current_id  == get_the_id() ){
-		          $current = 'active';
-							
-		        } elseif ( $current_id == get_option( 'page_on_front' ) ) {
-		          $current = '';
-
-		        } else {
-							$current = '';
-						}
-		        echo '<a class="'.$current.'" href="'.get_permalink( get_the_id() ).'">';
+		        echo '<a href="'.get_permalink( get_the_id() ).'">';
 		        echo get_the_post_thumbnail( get_the_id() );
 		        echo '</a>';
 			    }

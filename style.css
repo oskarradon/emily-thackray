@@ -76,11 +76,11 @@ header {
 }
 
 .project-nav a img {
-	width: 30px;
+	width: 20px;
 	height: auto;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding: 15px;
+	padding: 10px 5px 0;
 	opacity: .3;
 }
 
@@ -106,6 +106,13 @@ header {
 		768px
 		1024	*/
 
+@media (min-width: 480px) {
+	.project-nav a img {
+		width: 30px;
+		padding-top: 15px;
+	}
+}
+
 @media (min-width: 768px) {
 	.project-nav {
 		-webkit-box-ordinal-group: 3;
@@ -115,10 +122,15 @@ header {
 	}
 
 	.project-nav a img {
-		padding: 0 15px;
+		padding: 5px 15px;
+	}
+
+	.blog-name {
+		padding-top: 6px;
 	}
 
 	.page-nav {
+		padding-top: 6px;
 		-webkit-box-ordinal-group: 4;
 		    -ms-flex-order: 3;
 		        order: 3;
