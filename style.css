@@ -105,10 +105,34 @@ header {
   font-size: 70px;
 }
 
+/* SINGLE PAGE */
+
+.single-page {
+	font-family: "Galdeano", sans-serif;
+	font-size: 18px;
+}
+
+.single-page blockquote {
+	background: #EFEFEF;
+	padding: 20px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.single-page blockquote p {
+	margin: 0px;
+}
+
+.single-page pre > * {
+	width: 100%;
+	font-family: "Consolas" "Monaco" monospace
+}
+
 /* PROJECT PAGE */
 
-.page-title {
+main h1.page-title {
 	font-family: "Macondo", sans-serif;
+  font-weight: normal;
 }
 
 main p img {

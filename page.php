@@ -15,7 +15,12 @@
 get_header();
 ?>
 
-<main>
+<main class="single-page">
+
+  <h1 class="page-title"> <?php the_title() ?> </h1>
+
+  <?php the_content() ?>
+
 </main>
 
 <?php get_footer(); ?>
