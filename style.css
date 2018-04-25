@@ -94,25 +94,6 @@ header {
   font-family: "Macondo", sans-serif;
   height: 100%;
   text-align: center;
-  animation: fadeinphoto 7s 0s infinite;
-  -moz-animation: fadeinphoto 7s 0s infinite;
-  -webkit-animation: fadeinphoto 7s 0s infinite;
-  -o-animation: fadeinphoto 7s 0s infinite;
-}
-
-/* Animation Keyframes*/
-@keyframes fadeinphoto {
-  100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-}
-
-@-webkit-keyframes fadeinphoto {
-  100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
 }
 
 .text-snake {

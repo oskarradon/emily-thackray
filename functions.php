@@ -22,7 +22,6 @@ function emily_thackray_scripts() {
 	wp_enqueue_script('jquery');
 
 	wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js');
-
 	wp_enqueue_script('gsap');
 
 	wp_register_script('myscript', get_template_directory_uri() .'/script.js', array ('jquery'), false, false);
