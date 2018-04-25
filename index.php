@@ -23,13 +23,24 @@ get_header();
 
     <text>
 
-      <?php $offset = 0;  ?>
+      <?php $offset = 0; $postNumber = $wp_query->found_posts; ?>
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
+
         <textPath xlink:href="#text-path" startOffset="<?php echo $offset ?>"><a href=" <?php the_permalink(); ?> "><?php the_title(); ?></a></textPath>
 
-        <?php $offset += 380;  ?>
+        <?php if ( $postNumber <= 8 ) {
+        $offset += 380;
+      } elseif ( $postNumber == 9 ) {
+        $offset += 320;
+      } elseif ( $postNumber == 10 ) {
+        $offset += 280;
+      } else {
+        $offset += 180;
+      } ?> 
+
+
 
       <?php endwhile; else : ?>
         <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>

@@ -41,7 +41,7 @@ a:visited {
 
 header {
   font-size: 18px;
-	font-family: "Kavivanar", cursive;
+  font-family: "Kavivanar", cursive;
 }
 
 header a:hover {
@@ -84,8 +84,8 @@ header {
 
 .project-nav a img:hover {
   opacity: 1;
-	-webkit-transition: .5s;
-	transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 /* FRONT PAGE */
@@ -94,6 +94,25 @@ header {
   font-family: "Macondo", sans-serif;
   height: 100%;
   text-align: center;
+  animation: fadeinphoto 7s 0s infinite;
+  -moz-animation: fadeinphoto 7s 0s infinite;
+  -webkit-animation: fadeinphoto 7s 0s infinite;
+  -o-animation: fadeinphoto 7s 0s infinite;
+}
+
+/* Animation Keyframes*/
+@keyframes fadeinphoto {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes fadeinphoto {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
 }
 
 .text-snake {
@@ -108,47 +127,47 @@ header {
 /* SINGLE PAGE */
 
 .single-page {
-	font-family: "Galdeano", sans-serif;
-	font-size: 18px;
+  font-family: "Galdeano", sans-serif;
+  font-size: 18px;
 }
 
 .single-page blockquote {
-	background: #EFEFEF;
-	padding: 20px;
-	margin-left: 0;
-	margin-right: 0;
+  background: #efefef;
+  padding: 20px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .single-page blockquote p {
-	margin: 0px;
+  margin: 0px;
 }
 
 .single-page pre > * {
-	width: 100%;
-	font-family: "Consolas" "Monaco" monospace
+  width: 100%;
+  font-family: "Consolas" "Monaco" monospace;
 }
 
 /* PROJECT PAGE */
 
 main h1.page-title {
-	font-family: "Macondo", sans-serif;
+  font-family: "Macondo", sans-serif;
   font-weight: normal;
 }
 
 main p img {
-	width: 100%;
-	height: auto;
-	margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .more-projects-link {
-	float: right;
-	font-family: "Galdeano", sans-serif;
-	font-size: 18px;
+  float: right;
+  font-family: "Galdeano", sans-serif;
+  font-size: 18px;
 }
 
 .more-projects-link:hover {
-	color: darkgreen;
+  color: darkgreen;
 }
 
 /* MEDIA QUERIES */
@@ -167,9 +186,9 @@ main p img {
   .text-snake {
     height: 600px;
     width: auto;
-		margin-top: 60px;
+    margin-top: 60px;
     -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
 
   .text-snake text {
@@ -200,12 +219,12 @@ main p img {
     order: 3;
   }
 
-	.text-snake {
-		height: 800px;
-		width: auto;
-	}
+  .text-snake {
+    height: 800px;
+    width: auto;
+  }
 
-	.text-snake text {
-		font-size: 50px;
-	}
+  .text-snake text {
+    font-size: 50px;
+  }
 }
