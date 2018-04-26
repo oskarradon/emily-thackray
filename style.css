@@ -102,7 +102,7 @@ header {
 }
 
 .text-snake text {
-  font-size: 70px;
+  font-size: 60px;
 }
 
 /* SINGLE PAGE */
@@ -170,10 +170,6 @@ main p img {
     margin-top: 60px;
     -webkit-transform: rotate(-20deg);
     transform: rotate(-20deg);
-  }
-
-  .text-snake text {
-    font-size: 60px;
   }
 }
 
