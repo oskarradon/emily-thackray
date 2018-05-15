@@ -20,6 +20,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -93,6 +94,8 @@ header {
 .undulating-text {
   font-family: "Macondo", sans-serif;
   height: 100%;
+  margin-bottom: 200px;
+  margin-top: 150px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,7 +103,14 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* justify-content: center; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inner {
+  width: 900px;
+  height: 100%;
 }
 
 .text-snake {
