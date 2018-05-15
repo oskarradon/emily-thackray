@@ -13,4 +13,13 @@ $(function() {
 		})
 	]);
 	tl.play();
+
+	var isSafari =
+		navigator.vendor &&
+		navigator.vendor.indexOf("Apple") > -1 &&
+		navigator.userAgent &&
+		!navigator.userAgent.match("CriOS");
+	if (isSafari) {
+		$(".text2").hide();
+	}
 });

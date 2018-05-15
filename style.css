@@ -179,15 +179,13 @@ main p img {
 		1024	*/
 
 @media (min-width: 480px) {
+  body, html {
+    overflow-x: normal;
+  }
+
   .project-nav a img {
     width: 30px;
     padding-top: 15px;
-  }
-
-  .text-snake {
-    height: 200px;
-    width: auto;
-    margin-top: 60px;
   }
 }
 
@@ -215,7 +213,10 @@ main p img {
   }
 
   .text-snake {
-    height: 350px;
-    width: auto;
+    padding: 0;
+    width: 768px;
+    height: auto;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
 }
