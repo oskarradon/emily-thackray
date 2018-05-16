@@ -9,3 +9,13 @@
 
 get_header();
 ?>
+
+<main class="single-page">
+
+  <h1 class="page-title">404</h1>
+
+  <p>Sorry, the page you request was not found.</p>
+
+</main>
+
+<?php get_footer(); ?>
