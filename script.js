@@ -46,6 +46,7 @@ window.addEventListener("load", function() {
 		}
 	};
 
+	// hides second textPath element if screen is resized
 	addEvent(window, "resize", function(event) {
 		hideText();
 	});
