@@ -19,7 +19,6 @@ html {
 html,
 body {
   margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -35,7 +34,7 @@ a:visited {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding: 10px 10px 60px 10px;
+  padding: 20px 20px 60px 20px;
 }
 
 /* HEADER */
