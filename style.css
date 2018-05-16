@@ -71,6 +71,7 @@ header {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 100vw;
+  z-index: 1;
 }
 
 .project-nav a img {
