@@ -17,9 +17,6 @@ add_action( 'after_setup_theme', 'emily_thackray_setup' );
 function emily_thackray_scripts() {
 	wp_enqueue_style( 'emily-thackray-style', get_stylesheet_uri() );
 
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '1.8.1');
-	wp_enqueue_script('jquery');
 
 	wp_register_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js');
 	wp_enqueue_script('gsap');
