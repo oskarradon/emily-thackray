@@ -18,11 +18,16 @@ if ( ! function_exists( 'emily_thackray_setup' ) ) :
       'default-position-y'     => 'top',
       'default-size'           => 'cover',
 			'default-attachment'     => 'scroll',
-			'wp-head-callback'       => '_custom_background_cb',
+			'wp-head-callback'       => 'bg_body',
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => ''
 		);
 		add_theme_support( 'custom-background', $defaults );
+		function bg_body() {
+			if( is_front_page() ) {
+				_custom_background_cb();
+			}
+		}
 		function title_format($content) {
 			return '%s';
 		}
