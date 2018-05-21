@@ -43,10 +43,11 @@
 				if ( $the_query->have_posts() ) {
 			    while ( $the_query->have_posts() ) {
 		        $the_query->the_post();
-
-		        echo '<a href="'.get_permalink( get_the_id() ).'">';
-		        echo get_the_post_thumbnail( get_the_id() );
-		        echo '</a>';
+						if ( has_post_thumbnail() ) {
+							echo '<a href="'.get_permalink( get_the_id() ).'">';
+							echo get_the_post_thumbnail( get_the_id() );
+							echo '</a>';
+						}
 			    }
 				}
 				wp_reset_postdata();
