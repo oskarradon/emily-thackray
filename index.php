@@ -44,14 +44,6 @@ function echoSpaces () {
             <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
           <?php endif; ?>
         </textPath>
-
-        <textPath class="text2" xlink:href="#text-path" startOffset="-100%">
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <a xlink:href=" <?php the_permalink(); ?> " href=" <?php the_permalink(); ?> "><?php the_title(); ?></a><?php echoSpaces() ?>
-          <?php endwhile; else : ?>
-            <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-          <?php endif; ?>
-        </textPath>
       </text>
 
     </svg>
