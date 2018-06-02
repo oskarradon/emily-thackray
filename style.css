@@ -172,11 +172,26 @@ main p img {
 	float: right;
 	font-family: "Galdeano", sans-serif;
 	font-size: 18px;
-	font-weight: bold;
 }
 
 .more-projects-link:hover {
 	color: darkgreen;
+}
+
+input {
+	vertical-align: bottom;
+	border-radius: 0;
+	border: 1px solid lightgray;
+	font-family: "Galdeano", sans-serif;
+}
+
+input[type=password] {
+	height: 18px;
+	width: 120px;
+}
+
+input[type=submit] {
+	height: 22px;
 }
 
 /* MEDIA QUERIES */
