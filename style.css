@@ -80,7 +80,7 @@ header {
 }
 
 .project-nav a img {
-	width: 20px;
+	width: 10px;
 	height: auto;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -219,6 +219,7 @@ input[type=submit] {
 		-ms-flex-order: 2;
 		order: 2;
 		width: auto;
+		align-items: center;
 	}
 
 	.project-nav a img {
